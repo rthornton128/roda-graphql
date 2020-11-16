@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    graphql (1.11.6)
+    rack (2.2.3)
+    roda (3.38.0)
+      rack
+    sequel (5.38.0)
+    sqlite3 (1.4.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  graphql
+  roda
+  sequel
+  sqlite3
+
+BUNDLED WITH
+   2.1.4
