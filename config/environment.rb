@@ -1,4 +1,4 @@
-APP_ROOT = File.expand_path('..', __dir__)
+# frozen_string_literal: true
 
 def development?
   env == 'development'

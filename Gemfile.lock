@@ -3,6 +3,7 @@ GEM
   specs:
     graphql (1.11.6)
     rack (2.2.3)
+    rack-graphiql (0.1.1)
     roda (3.38.0)
       rack
     sequel (5.38.0)
@@ -12,7 +13,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   graphql
+  rack-graphiql
   roda
   sequel
   sqlite3
