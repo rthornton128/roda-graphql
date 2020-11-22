@@ -1,20 +1,14 @@
 class Application
   route do |r|
-    r.on 'graphql' do
-      'graphql'
-      # r.post do
-      #   result = Schema.execute(graphql_query, variables: graphql_variables)
+    require_relative '../routes/graphql'
+    require_relative '../routes/graphiql'
 
-      #   response['Content-Type'] = 'application/json; charset=utf-8'
-      #   result.to_json
-      #   end
+    r.on('graphql') do
+      r.run(::Graphql)
     end
 
-    r.on 'graphiql' do
-      'graphiql'
-      # r.get do
-      #   GraphiqlController.new(params: request.body.read).process
-      # end
+    r.on('graphiql') do
+      r.run(::Graphiql)
     end
   end
 end

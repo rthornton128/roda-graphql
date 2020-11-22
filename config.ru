@@ -6,4 +6,4 @@ Bundler.require
 require_relative 'config/environment'
 require_relative 'application'
 
-run Application.freeze.app
+run Application.app
