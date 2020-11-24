@@ -7,4 +7,5 @@ class Application < Roda
   plugin(:json_parser)
   
   require_relative 'config/routes'
+  require_relative 'models'
 end
