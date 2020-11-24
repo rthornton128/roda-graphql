@@ -1,5 +1,7 @@
-require_relative 'graphql/types/name_type'
-require_relative 'graphql/types/query_type'
+require_relative 'graphql/types/user'
+require_relative 'graphql/types/create_user'
+require_relative 'graphql/types/mutation'
+require_relative 'graphql/types/query'
 require_relative 'graphql/schema'
 
 class Graphql < Roda
