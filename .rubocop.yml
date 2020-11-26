@@ -7,3 +7,6 @@ AllCops:
   NewCops: enable
   Exclude:
     - "assets/**/*"
+
+Style/Documentation:
+  Enabled: false
