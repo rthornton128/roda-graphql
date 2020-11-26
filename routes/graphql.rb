@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'graphql/types/user'
 require_relative 'graphql/types/create_user'
 require_relative 'graphql/types/mutation'

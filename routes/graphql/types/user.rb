@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class User < GraphQL::Schema::Object
     description('User type')

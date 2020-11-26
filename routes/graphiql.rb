@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Graphiql < Roda
   plugin(:h)
   plugin(:json)

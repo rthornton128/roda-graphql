@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class CreateUser < GraphQL::Schema::Mutation
     null(true)

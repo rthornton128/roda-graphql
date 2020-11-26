@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def require_all(*paths)
   paths.each do |path|
   end
