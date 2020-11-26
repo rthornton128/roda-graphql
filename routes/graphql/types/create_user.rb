@@ -13,17 +13,11 @@ module Types
 
     def resolve(first_name:, last_name:, email:)
       user = ::User.create(first_name: first_name, last_name: last_name, email: email)
-
-      unless user
-        {
-          user: nil,
-          errors: ['User error message']
-        }
-      end
+      errors = user ? ['User error message'] : []
 
       {
         user: user,
-        errors: []
+        errors: errors
       }
     end
   end
