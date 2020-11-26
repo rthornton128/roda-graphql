@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   class CreateUser < GraphQL::Schema::Mutation
     null(true)
@@ -11,15 +13,11 @@ module Types
 
     def resolve(first_name:, last_name:, email:)
       user = ::User.create(first_name: first_name, last_name: last_name, email: email)
-
-      {
-        user: nil,
-        errors: ['User error message'],
-      } unless user
+      errors = user ? ['User error message'] : []
 
       {
         user: user,
-        errors: [],
+        errors: errors
       }
     end
   end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Application
   route do |r|
     require_relative '../routes/graphql'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Graphiql < Roda
   plugin(:h)
   plugin(:json)
@@ -8,7 +10,7 @@ class Graphiql < Roda
       show
     end
   end
-  
+
   def show
     path = File.join(APP_ROOT, 'routes', 'views', 'graphiql.erb')
     template = ERB.new(File.read(path))
@@ -18,7 +20,7 @@ class Graphiql < Roda
   private
 
   attr_reader :params
-  
+
   def endpoint
     'graphql'
   end

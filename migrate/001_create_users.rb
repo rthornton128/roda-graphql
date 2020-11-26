@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Sequel.migration do
   change do
     create_table(:users) do
@@ -6,7 +8,7 @@ Sequel.migration do
       String(:last_name, null: false)
       String(:email, null: false)
       index(:email, unique: true)
-      index([:first_name, :last_name])
+      index(%i[first_name last_name])
     end
   end
 end
