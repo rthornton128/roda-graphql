@@ -3,7 +3,7 @@ module Types
     description('The query root of this schema')
 
     field(:user, User, null: true) do
-        description('Find a name')
+      description('Find a name')
     end
 
     field(:users, [User], null: false)
