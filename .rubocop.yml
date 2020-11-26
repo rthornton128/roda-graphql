@@ -1,0 +1,9 @@
+require:
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-sequel
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - "assets/**/*"

@@ -1,13 +1,40 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ast (2.4.1)
     graphql (1.11.6)
+    parallel (1.20.1)
+    parser (2.7.2.0)
+      ast (~> 2.4.1)
     rack (2.2.3)
     rack-graphiql (0.1.1)
+    rainbow (3.0.0)
+    regexp_parser (2.0.0)
+    rexml (3.2.4)
     roda (3.38.0)
       rack
+    rubocop (1.4.2)
+      parallel (~> 1.10)
+      parser (>= 2.7.1.5)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8)
+      rexml
+      rubocop-ast (>= 1.1.1)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (1.2.0)
+      parser (>= 2.7.1.5)
+    rubocop-minitest (0.10.1)
+      rubocop (>= 0.87)
+    rubocop-performance (1.9.0)
+      rubocop (>= 0.90.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    rubocop-sequel (0.1.0)
+      rubocop (~> 1.0)
+    ruby-progressbar (1.10.1)
     sequel (5.38.0)
     sqlite3 (1.4.2)
+    unicode-display_width (1.7.0)
 
 PLATFORMS
   ruby
@@ -17,6 +44,10 @@ DEPENDENCIES
   graphql
   rack-graphiql
   roda
+  rubocop
+  rubocop-minitest
+  rubocop-performance
+  rubocop-sequel
   sequel
   sqlite3
 
