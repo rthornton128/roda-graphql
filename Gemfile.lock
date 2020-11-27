@@ -3,9 +3,11 @@ GEM
   specs:
     ast (2.4.1)
     graphql (1.11.6)
+    mocha (1.11.2)
     parallel (1.20.1)
     parser (2.7.2.0)
       ast (~> 2.4.1)
+    power_assert (1.2.0)
     rack (2.2.3)
     rack-graphiql (0.1.1)
     rainbow (3.0.0)
@@ -24,8 +26,6 @@ GEM
       unicode-display_width (>= 1.4.0, < 2.0)
     rubocop-ast (1.2.0)
       parser (>= 2.7.1.5)
-    rubocop-minitest (0.10.1)
-      rubocop (>= 0.87)
     rubocop-performance (1.9.0)
       rubocop (>= 0.90.0, < 2.0)
       rubocop-ast (>= 0.4.0)
@@ -34,6 +34,9 @@ GEM
     ruby-progressbar (1.10.1)
     sequel (5.38.0)
     sqlite3 (1.4.2)
+    test-unit (3.3.7)
+      power_assert
+    thor (1.0.1)
     unicode-display_width (1.7.0)
 
 PLATFORMS
@@ -42,14 +45,16 @@ PLATFORMS
 DEPENDENCIES
   bundler
   graphql
+  mocha
   rack-graphiql
   roda
   rubocop
-  rubocop-minitest
   rubocop-performance
   rubocop-sequel
   sequel
   sqlite3
+  test-unit
+  thor
 
 BUNDLED WITH
    2.1.4
