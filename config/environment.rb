@@ -13,5 +13,7 @@ def test?
 end
 
 def env
-  @env ||= ENV['ENV'] || ENV['RACK_ENV'] || 'production'
+  @env ||= ENV['ENV'] || ENV['RACK_ENV'] || 'development'
 end
+
+require_relative 'application'
