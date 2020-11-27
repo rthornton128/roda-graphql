@@ -1,6 +1,3 @@
 # frozen_string_literal: true
 
-require_relative('config/db')
-require_relative('lib/loader')
-
-require_path(File.join(APP_ROOT, 'models'))
+Dir[File.join(APP_ROOT, 'models', '*.rb')].each { |file| puts file; require file }

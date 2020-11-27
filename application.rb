@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-APP_ROOT = File.expand_path(__dir__)
+APP_ROOT = __dir__
+
+require_relative 'config/environment'
 
 class Application < Roda
   plugin(:json)
