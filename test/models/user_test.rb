@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-require 'user'
+require 'models/user'
 
 class TestUser < ApplicationTest
   def setup
