@@ -2,22 +2,15 @@
 
 require_relative 'graphql/schema'
 
-class Graphql < Roda
-  plugin(:json)
-  plugin(:json_parser)
+class Application
 
-  route do |r|
-    r.is(true) do
-      @query = r.params.fetch('query', '')
-      show
+  hash_branch('graphql') do |r|
+    r.post(true) do
+      query = r.params.fetch('query', '')
+    
+      Schema.execute(query).to_h
     end
   end
 
   private
-
-  attr_reader :query
-
-  def show
-    Schema.execute(query).to_h
-  end
 end
