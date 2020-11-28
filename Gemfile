@@ -10,6 +10,7 @@ gem 'rack-graphiql'
 gem 'roda'
 gem 'sequel'
 gem 'sqlite3'
+gem 'zeitwerk'
 
 group :development, :test do
   gem 'thor', require: false

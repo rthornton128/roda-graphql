@@ -38,6 +38,7 @@ GEM
       power_assert
     thor (1.0.1)
     unicode-display_width (1.7.0)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
@@ -55,6 +56,7 @@ DEPENDENCIES
   sqlite3
   test-unit
   thor
+  zeitwerk
 
 BUNDLED WITH
    2.1.4

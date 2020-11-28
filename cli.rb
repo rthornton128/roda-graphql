@@ -22,7 +22,7 @@ class CLI < Thor
 
   desc 'test', 'Run tests'
   def test(*_args)
-    run('ruby -Itest -I. test/all.rb')
+    run('ruby -I. test/all.rb')
   end
 end
 

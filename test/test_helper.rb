@@ -3,4 +3,6 @@
 require 'test/unit'
 require 'mocha/test_unit'
 
-class ApplicationTest < Test::Unit::TestCase; end
+module TestHelper
+  class ApplicationTest < Test::Unit::TestCase; end
+end
