@@ -6,8 +6,9 @@ class TestGraphql < ApplicationTest
   def test_show
     Schema.stubs(:execute).once.returns({})
    
-    # request = Rack::MockRequest.new(Graphql.app)
     env = Rack::MockRequest.env_for('http://foo.bar')
+    env[Rack::PATH_INFO] = ""
+    
     Graphql.app.call(env)
   end
 end
