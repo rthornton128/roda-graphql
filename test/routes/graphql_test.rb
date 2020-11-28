@@ -1,20 +1,18 @@
-require 'test_helper'
+# frozen_string_literal: true
 
-require 'application'
-
-class TestGraphql < ApplicationTest
+class TestGraphql < TestHelper::ApplicationTest
   def test_show_failure_with_get
     env = Rack::MockRequest.env_for('http://foo.bar/graphql')
-    
-    Schema.stubs(:execute).never
+
+    ApplicationSchema.stubs(:execute).never
     Application.app.call(env)
   end
 
   def test_show_success_with_post
     env = Rack::MockRequest.env_for('http://foo.bar/graphql?query=mutation')
     env[Rack::REQUEST_METHOD] = Rack::POST
-    
-    Schema.stubs(:execute).once.returns({})
+
+    ApplicationSchema.stubs(:execute).once.returns({})
     Application.app.call(env)
   end
 end

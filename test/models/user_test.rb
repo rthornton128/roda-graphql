@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
-require 'test_helper'
-
-require 'models/user'
-
-class TestUser < ApplicationTest
+class TestUser < TestHelper::ApplicationTest
   def setup
     User.truncate
   end
@@ -20,10 +16,10 @@ class TestUser < ApplicationTest
   end
 
   def test_user_unique
-    ::User.create(first_name: 'User', last_name: 'Name', email: 'user.name@something.com')
+    User.create(first_name: 'User', last_name: 'Name', email: 'user.name@something.com')
 
     assert_raise(Sequel::UniqueConstraintViolation) do
-      ::User.create(first_name: 'User', last_name: 'Name', email: 'user.name@something.com')
+      User.create(first_name: 'User', last_name: 'Name', email: 'user.name@something.com')
     end
   end
 end
