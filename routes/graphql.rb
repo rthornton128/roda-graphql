@@ -7,7 +7,17 @@ class Graphql < Roda
   plugin(:json_parser)
 
   route do |r|
-    query = r.params.fetch('query', '')
+    r.is(true) do
+      @query = r.params.fetch('query', '')
+      show
+    end
+  end
+
+  private
+
+  attr_reader :query
+
+  def show
     Schema.execute(query).to_h
   end
 end
