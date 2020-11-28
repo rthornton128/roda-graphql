@@ -11,4 +11,13 @@ class TestGraphiql < ApplicationTest
     
     Graphiql.app.call(env)
   end
+
+  def test_show_should_fail_on_post
+    env = Rack::MockRequest.env_for('http://foo.bar')
+    env[Rack::PATH_INFO] = ""
+    env[Rack::REQUEST_METHOD] = Rack::POST
+    
+    Schema.stubs(:execute).never
+    Graphiql.app.call(env)
+  end
 end

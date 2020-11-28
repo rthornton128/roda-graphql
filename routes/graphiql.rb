@@ -6,7 +6,7 @@ class Graphiql < Roda
   plugin(:json)
 
   route do |r|
-    r.is(true) do
+    r.get(true) do
       @params = r.params
       show
     end
