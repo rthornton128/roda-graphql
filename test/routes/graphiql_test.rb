@@ -1,23 +1,21 @@
 require 'test_helper'
 
-require 'routes/graphiql'
+require 'application'
 
 class TestGraphiql < ApplicationTest
   def test_show
-    Helpers::Graphiql.any_instance.stubs(:result).once.returns('')
-   
-    env = Rack::MockRequest.env_for('http://foo.bar')
-    env[Rack::PATH_INFO] = ""
+    env = Rack::MockRequest.env_for('http://foo.bar/graphiql')
     
-    Graphiql.app.call(env)
+    Helpers::Graphiql.any_instance.stubs(:result).once.returns('')
+    Application.app.call(env)
   end
 
   def test_show_should_fail_on_post
-    env = Rack::MockRequest.env_for('http://foo.bar')
-    env[Rack::PATH_INFO] = ""
+    env = Rack::MockRequest.env_for('http://foo.bar/graphiql')
     env[Rack::REQUEST_METHOD] = Rack::POST
     
     Schema.stubs(:execute).never
-    Graphiql.app.call(env)
+    Helpers::Graphiql.any_instance.stubs(:result).never
+    Application.app.call(env)
   end
 end

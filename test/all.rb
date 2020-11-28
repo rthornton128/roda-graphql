@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 ENV['ENV'] ||= 'test'
-APP_ROOT = File.join(__dir__, '..')
 
-require_relative '../config/environment'
+require 'application'
 
 Sequel.extension(:migration)
 Sequel::Migrator.run(DB, 'migrate')
