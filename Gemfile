@@ -6,7 +6,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem 'bundler'
 gem 'graphql'
-gem 'rack-graphiql'
+gem 'puma'
 gem 'roda'
 gem 'sequel'
 gem 'sqlite3'
