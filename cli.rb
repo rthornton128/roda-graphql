@@ -22,7 +22,7 @@ class CLI < Thor
 
   desc 'server', 'Run server'
   def server
-    run('rackup')
+    run('bundle exec puma')
   end
 
   desc 'style', 'Run rubocop to check style'
