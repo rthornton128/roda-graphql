@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
+gem 'bootsnap', require: false
 gem 'bundler'
 gem 'graphql'
 gem 'puma'
