@@ -1,5 +1,10 @@
 # Roda-GraphQL
 
+## Instructions
+
+- `./cli.rb server` to run the server
+- `./cli.rb help` to see what other options are available.
+
 ## Rack/Puma
 
 1. Run `rackup` or `puma`.
