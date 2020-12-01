@@ -24,6 +24,7 @@ group :development do
 end
 
 group :test do
+  gem 'fixture_dependencies'
   gem 'mocha', require: false
   gem 'test-unit', require: 'test/unit'
 end
