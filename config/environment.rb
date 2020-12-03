@@ -1,19 +1,7 @@
 # frozen_string_literal: true
 
-def development?
-  env == 'development'
-end
+environment_path = File.join(APP_ROOT, 'config', 'environments', "#{Env}.rb")
 
-def production?
-  env == 'production'
-end
-
-def test?
-  env == 'test'
-end
-
-def env
-  @env ||= ENV['ENV'] || ENV['RACK_ENV'] || 'development'
-end
+require environment_path if File.exist?(environment_path)
 
 require_relative 'application'

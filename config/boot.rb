@@ -6,11 +6,11 @@ require 'zeitwerk'
 
 Bootsnap.setup(
   cache_dir: 'tmp/cache',
-  development_mode: development?,
+  development_mode: Env.development?,
   load_path_cache: true,
   autoload_paths_cache: false,
   disable_trace: false,
-  compile_cache_iseq: !test?,
+  compile_cache_iseq: !Env.test?,
   compile_cache_yaml: true
 )
 
@@ -19,7 +19,7 @@ loader.push_dir(File.join(APP_ROOT, 'graphql'))
 loader.push_dir(File.join(APP_ROOT, 'helpers'))
 loader.push_dir(File.join(APP_ROOT, 'models'))
 loader.push_dir(File.join(APP_ROOT, 'routes'))
-loader.push_dir(File.join(APP_ROOT, 'test')) if test?
+loader.push_dir(File.join(APP_ROOT, 'test')) if Env.test?
 
 # Zeitwerk expects a file to declare a constant matching its filename but
 # routes in this app extend the core Application. Ignore them to prevent
