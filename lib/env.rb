@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Environment
 module Env
   class << self
