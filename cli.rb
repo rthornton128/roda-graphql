@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'thor'
-
 APP_ROOT = __dir__
+
+require 'thor'
 
 class CLI < Thor
   include Thor::Actions
@@ -36,7 +36,7 @@ class CLI < Thor
 
   desc 'test', 'Run tests'
   def test(*_args)
-    run('ruby -I. test/all.rb')
+    run('ruby -I. -Ilib test/all.rb')
   end
 end
 

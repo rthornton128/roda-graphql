@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
-ENV['ENV'] ||= 'test'
+ENV['RACK_ENV'] ||= 'test'
 
+require 'env'
 require 'application'
 
 Sequel.extension(:migration)
