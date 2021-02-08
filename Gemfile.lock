@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    bootsnap (1.7.0)
+    bootsnap (1.7.1)
       msgpack (~> 1.0)
     fixture_dependencies (1.10.0)
     graphql (1.12.3)
