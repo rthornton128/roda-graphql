@@ -13,11 +13,15 @@ module Types
 
     def resolve(first_name:, last_name:, email:)
       user = ::User.create(first_name: first_name, last_name: last_name, email: email)
-      errors = user ? ['User error message'] : []
 
       {
         user: user,
-        errors: errors
+        errors: []
+      }
+    rescue Sequel::UniqueConstraintViolation => e
+      {
+        user: nil,
+        errors: [e.inspect]
       }
     end
   end
