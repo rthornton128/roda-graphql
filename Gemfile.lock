@@ -19,7 +19,7 @@ GEM
     rainbow (3.0.0)
     regexp_parser (2.1.1)
     rexml (3.2.5)
-    roda (3.45.0)
+    roda (3.46.0)
       rack
     rubocop (1.18.3)
       parallel (~> 1.10)
