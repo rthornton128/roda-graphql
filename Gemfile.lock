@@ -40,7 +40,7 @@ GEM
     ruby-progressbar (1.11.0)
     sequel (5.49.0)
     sqlite3 (1.4.2)
-    test-unit (3.4.8)
+    test-unit (3.5.0)
       power_assert
     thor (1.1.0)
     unicode-display_width (2.1.0)
