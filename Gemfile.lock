@@ -42,7 +42,7 @@ GEM
     sqlite3 (1.4.2)
     test-unit (3.5.3)
       power_assert
-    thor (1.1.0)
+    thor (1.2.1)
     unicode-display_width (2.1.0)
     zeitwerk (2.5.3)
 
