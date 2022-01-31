@@ -5,7 +5,7 @@ GEM
     bootsnap (1.10.2)
       msgpack (~> 1.2)
     fixture_dependencies (1.10.0)
-    graphql (1.13.5)
+    graphql (1.13.7)
     mocha (1.13.0)
     msgpack (1.4.4)
     nio4r (2.5.8)
