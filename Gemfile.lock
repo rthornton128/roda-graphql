@@ -44,7 +44,7 @@ GEM
       power_assert
     thor (1.2.1)
     unicode-display_width (2.1.0)
-    zeitwerk (2.5.3)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   ruby
