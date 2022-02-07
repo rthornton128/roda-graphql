@@ -21,7 +21,7 @@ GEM
     rexml (3.2.5)
     roda (3.52.0)
       rack
-    rubocop (1.25.0)
+    rubocop (1.25.1)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
