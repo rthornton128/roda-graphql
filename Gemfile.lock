@@ -6,7 +6,7 @@ GEM
       msgpack (~> 1.2)
     fixture_dependencies (1.10.0)
     graphql (2.0.6)
-    mocha (1.13.0)
+    mocha (1.14.0)
     msgpack (1.4.5)
     nio4r (2.5.8)
     parallel (1.22.1)
