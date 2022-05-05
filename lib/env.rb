@@ -22,7 +22,7 @@ module Env
     private
 
     def environment
-      @environment ||= ENV['RACK_ENV'] || 'development'
+      @environment ||= ENV.fetch('RACK_ENV', 'development')
     end
   end
 end
