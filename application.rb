@@ -9,7 +9,7 @@ class Application < Roda
   plugin(:json)
   plugin(:json_parser)
 
-  Dir[File.join('routes', '*.rb')].each { |file| require_relative file }
+  Dir[File.join('routes', '*.rb')].sort.each { |file| require_relative file }
 
   route(&:hash_routes)
 end
